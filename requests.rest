@@ -1,0 +1,68 @@
+### REGISTER USER
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+# const { name, email, password, phone } = req.body
+
+{
+    "name":"Dmytro",
+    "email":"dmytro@gmail.com",
+    "password":"dmytro",
+    "phone":"095-555-32-85"
+}
+
+### LOGIN USER
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+# const { email, password } = req.body
+
+{
+    "email":"dmytro@gmail.com",
+    "password":"dmytro"
+}
+
+### GET ME
+GET http://localhost:3000/api/me
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRteXRyb0BnbWFpbC5jb20iLCJpYXQiOjE2Mjc0NzYyNzQsImV4cCI6MTYyNzQ4NzA3NH0.4hnb12_B9PuxfSYkRBQjbIN_aCAg1Ttb_qHqqUj5bNs
+
+### GET ITEMS LIST
+GET http://localhost:3000/api/items
+
+### GET ITEM BY ID
+GET http://localhost:3000/api/items/4
+
+### UPDATE ITEM BY ID
+PUT http://localhost:3000/api/items/4
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRteXRyb0BnbWFpbC5jb20iLCJpYXQiOjE2Mjc1NjMzNzMsImV4cCI6MTYyNzU3NDE3M30.1qnSnMmrcFn89G-NBrrc5sgI8OSdlJbdyZ6a0rL2xsY
+
+# const authToken = req.headers.authorization
+# const id = req.params.id
+# const { title, price } = req.body
+
+{
+    "price":"10",
+    "title":"New Notebook"
+}
+
+### DELETE ITEM BY ID
+DELETE http://localhost:3000/api/items/5
+Authorization: yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRteXRyb0BnbWFpbC5jb20iLCJpYXQiOjE2Mjc0NzYyNzQsImV4cCI6MTYyNzQ4NzA3NH0.4hnb12_B9PuxfSYkRBQjbIN_aCAg1Ttb_qHqqUj5bNs
+
+### CREATE ITEN
+POST http://localhost:3000/api/items
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRteXRyb0BnbWFpbC5jb20iLCJpYXQiOjE2Mjc1NjMzNzMsImV4cCI6MTYyNzU3NDE3M30.1qnSnMmrcFn89G-NBrrc5sgI8OSdlJbdyZ6a0rL2xsY
+
+{
+    "title":"iPhone",
+    "price":"2222"
+}
+
+### IMAGE
+POST http://localhost:3000/api/items/4/images
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRteXRyb0BnbWFpbC5jb20iLCJpYXQiOjE2Mjc1NjMzNzMsImV4cCI6MTYyNzU3NDE3M30.1qnSnMmrcFn89G-NBrrc5sgI8OSdlJbdyZ6a0rL2xsY
+Content-Type: multipart/form-data
+#NOT TESTED
+
